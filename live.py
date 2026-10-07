@@ -3,7 +3,7 @@ import threading
 from flask import Flask
 import bot
 
-flask_app = Flask(name)
+flask_app = Flask("live")
 
 
 @flask_app.route("/")
@@ -21,9 +21,8 @@ def run_flask():
     )
 
 
-if name == "main":
-    threading.Thread(target=run_flask, daemon=True).start()
+threading.Thread(target=run_flask, daemon=True).start()
 
-    app = bot.build_app()
-    app.add_error_handler(bot.error_handler)
-    app.run_polling(drop_pending_updates=True)
+app = bot.build_app()
+app.add_error_handler(bot.error_handler)
+app.run_polling(drop_pending_updates=True)
