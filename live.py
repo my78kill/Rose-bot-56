@@ -13,11 +13,17 @@ def home():
 
 def run_flask():
     port = int(os.environ.get("PORT", 10000))
-    flask_app.run(host="0.0.0.0", port=port, threaded=True, use_reloader=False)
+    flask_app.run(
+        host="0.0.0.0",
+        port=port,
+        threaded=True,
+        use_reloader=False
+    )
 
 
 if name == "main":
     threading.Thread(target=run_flask, daemon=True).start()
+
     app = bot.build_app()
     app.add_error_handler(bot.error_handler)
     app.run_polling(drop_pending_updates=True)
