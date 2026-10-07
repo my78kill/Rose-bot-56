@@ -318,10 +318,9 @@ async def cmd_demote(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         await context.bot.promote_chat_member(
             update.effective_chat.id, target.id,
-            can_delete_messages=False, can_restrict_messages=False,
-            can_promote_members=False, can_change_info=False,
-            can_invite_users=False, can_pin_messages=False,
-            can_delete_messages=False, can_restrict_members=False)
+            can_delete_messages=False, can_promote_members=False,
+            can_restrict_members=False, can_change_info=False,
+            can_invite_users=False, can_pin_messages=False)
         await update.effective_message.reply_text(f"✅ Demoted {mention(target)}.")
     except Exception as e:
         await update.effective_message.reply_text(f"Failed: {e}")
