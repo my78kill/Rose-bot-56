@@ -31,7 +31,7 @@ def help_menu_buttons():
 
 def start_buttons(bot_username):
     keyboard = [
-        [InlineKeyboardButton("📢 Support Channel", url="https://t.me/YourSupportChannel")],
+        [InlineKeyboardButton("📢 Support Channel", url="https://t.me/Umm_ohk")],
         [InlineKeyboardButton("➕ Add Me to Group", url=f"https://t.me/{bot_username}?startgroup=true")]
     ]
     return InlineKeyboardMarkup(keyboard)
