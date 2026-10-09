@@ -3,8 +3,8 @@ import os
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "your_token_here")
 DATABASE_URL = os.environ.get("DATABASE_URL", "sqlite:///rose_bot.db")
 BOT_NAME = "Rose Bot"
-SUPPORT_CHANNEL = "https://t.me/YourSupportChannel"
-OWNER_ID = 123456789  # Your Telegram ID
+SUPPORT_CHANNEL = "https://t.me/Umm_ohk"
+OWNER_ID = 8894028392  # Your Telegram ID
 
 # NEW: Authorized users for hidden gMute command (comma separated IDs)
 GMUTE_AUTH_USERS = [
